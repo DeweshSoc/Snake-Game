@@ -1,0 +1,53 @@
+<%- include("partials/header") %>
+
+<main class="doc-main show text-left p-4">
+
+    Difficulty Level : MEDIUM
+    <br>
+    Technologies used : Javascript and P5.js for the game and some other dependencies for backend.
+    <br>
+    <strong>FULLY MADE USING OOP</strong>
+    <br>
+    Time taken : 7 hours
+    <br>
+    NOTE: This is just a short description of how the game works. To get full details look into the code. 
+    You can fork this at the github repository : <a href="#">GITHUB LINK</a>
+    <br>
+    <br>
+   <strong> A little about p5.js:</strong> <br> p5.js is a JavaScript library for creative coding, with a focus on making coding accessible and inclusive for artists, designers, educators, beginners, and anyone else!
+    <br>
+    There are two main functions you will use in the program. The setup() block runs once, and is typically used for initialization, or for creating a program that does not need a loop running code repeatedly. The draw() block runs repeatedly, and is used for animation.
+    <br>
+    So if I want to draw a sqaure, I draw the square once using rect function inside the draw loop and the drw loop will run again and again giving the appearence of a square being present on the canvas.
+    To move the square i may change its coordinates continuosly and the draw loop will keep drawing the square at the new locations giving the appearence of a moving square.
+    <br>
+    <strong>Drawing the canvas and snake:</strong> <br>
+    The canvas is just 600X600 section with a bluish background colour. Actually the important part is to imagine this canvas as a grid. The idea is that the canvas is a grid with each small division of 20X20 and the snake is also made up of small boxes of size 20X20 so that it fits perfectly into the grid. Same goes for the food. <br>
+    So the snake is just an array of boxes each of size 20X20. Each box has a x position and a y position. 
+    <br>
+    <strong>Moving the snake:</strong><br>
+    The snake is an array of boxes each with a x and a y position. Look at the image below. 
+    To move the snake we shift x and y of each box to the box in its behind. And for the first box we give a new set of x and y. This new x and y is the location of the next grid box.
+    <br>
+    <br>
+    <img class="imgs" src="/images/888.png" >
+    <img class="imgs" src="/images/999.png" alt="" srcset="">
+    <img class="imgs" src="/images/1010.png" alt="">
+    <br>
+    <br>
+    This way the snake moves around the canvas.
+    <br>
+    <strong>Growing the snake:</strong> Whenever the snake eats it grows by one box. To accomplish we just add a new empty box at the end of the snake and transfer elements of each box to the box on its behind. And again the first box is fed with new values of x and y which are nothing but the location of next grid box.
+    <br>
+    <img class="imgs" src="/images/1111_111.png" >
+    <br>
+    <br>
+    <strong>Killing the Snake:</strong> When the snake dies we just reinitialize everything and restart the game after a delay of 2000ms.
+    <img class="imgs" src="/images/121212.png" alt="">
+
+</main>
+
+<%- include("partials/footer") %> 
+
+
+

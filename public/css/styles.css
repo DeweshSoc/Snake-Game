@@ -1,0 +1,76 @@
+body{
+    background-color: #ccc;
+}
+.imgs{
+    width: 100%;
+}
+.big-heading{
+    font-family: "Lato";
+}
+
+.left{
+    display: flex;
+    padding: 2%;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-around;
+    width: 30%;
+    float: left;
+}
+main{
+    display: inline-block;
+    margin: 3% 10% 0;
+}
+.loser{
+    display: none;
+    position: absolute;
+    right: 27%;
+    top:43%;
+    font-family: "Lato";
+    font-weight: 700;
+    color: crimson;
+}
+.show{
+    display: block;
+}
+
+.mobile-screens{
+    display: none;
+    padding: 2rem;
+}
+
+@media(max-width:1200px){
+    main{
+        margin: 3% 5% 0;
+    }
+}
+
+@media(max-width:1001px){
+    main{
+        margin: 3% 3% 0;
+    }
+}
+
+@media(max-width:992px){
+    .left,main{
+        display: none;
+    }
+    .mobile-screens{
+        display: block;
+    }
+    .doc-main{
+        margin: 0;
+    }
+    .doc-main {
+        font-size: 1rem;
+    }
+}
+
+@media(max-width:575px){
+    .doc-main{
+        font-size: 0.9rem;
+    }
+    .doc-main img{
+        padding: -5px;
+    }
+}
